@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="myStyle.css">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+
+
+function calculation(){
+    var num1=document.getElementById("num1").value;
+    var num2=document.getElementById("num2").value;
+    num1=parseInt(num1);
+    num2=parseInt(num2);
+	
+  var operator= document.getElementById("operator").value;
+  
+  switch(operator){
+    case "+":
+    result=num1+num2;
+    break;
+    case "-":
+    result=num1-num2;
+    break;
+    case "*":
+    result=num1*num2;
+    break;
+    case "/":
+    result=num1/num2;
+    break;
+  }
+document.getElementById("result").innerHTML="Result = "+ result;
+}
+</script>
+</head>
+<body>
+  <div id="wholeBlock">
+    <div>
+      <h1>JS Calculator</h1>
+    </div>
+    <div>
+      <p class="input">
+        Number 1<br>
+        <input id="num1" type="text" size="80">
+      </p>
+      <p class="input">
+        Number 2<br>
+        <input id="num2" type="text" size=80>
+      </p>
+      <p class="inputA">Operate way?<br>
+        <select id="operator" name="Calculate" width=80>
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+      </p>
+      <div class="inputB">
+        <input id="calculate" type="button" value="run" onclick="calculation()" >
+      </div>
+      <p id="result"></p>
+</body>
+</html>
